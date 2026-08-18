@@ -1,0 +1,6 @@
+**/checkpoints/
+outputs/train/
+*.pt
+*.safetensors
+wandb/
+__pycache__/
