@@ -10,6 +10,13 @@ LeRobot으로 Diffusion Policy와 ACT를 직접 학습시키고(사전학습 모
 > 2. pusht(반응성이 중요한 밀기 작업)에서는 Diffusion Policy가 확실히 앞선다 (68% vs 33%).
 > 3. **그러나 aloha 삽입(정밀 조작 작업)에서는 정반대로 ACT가 Diffusion Policy를 압도한다** (24% vs 8%). 태스크 하나만 보고 일반화하면 틀린 결론에 도달한다.
 
+**같은 aloha 삽입 작업, 같은 학습량(100,000 스텝) — 결과는 이렇게 다르다**
+
+| ACT — 성공 | Diffusion Policy — 실패 |
+|---|---|
+| ![ACT 성공](plots/07_act_aloha_success.gif) | ![Diffusion 실패](plots/08_diffusion_aloha_fail.gif) |
+| 핀을 잡아 소켓에 정확히 삽입 | 오른쪽 팔이 핀을 놓쳐 삽입 실패 |
+
 ![태스크에 따라 우세한 모델이 뒤바뀐다](plots/06_summary_task_dependency.png)
 
 ---
@@ -257,6 +264,12 @@ pusht에서는 8이 최적이고 100은 완전 실패(0%)였지만, aloha에서�
 pusht에서는 Diffusion Policy(62.5~68%)가 ACT(29~33%)를 크게 앞섰지만, aloha에서는
 **ACT가 대부분의 구간에서 Diffusion Policy를 앞섰고**, Diffusion Policy는 10만
 스텝을 다 채워도 대부분 0%대에 머물렀습니다. 완전히 반대 결과입니다.
+
+실제 rollout 영상으로 보면 차이가 뚜렷합니다. 같은 100,000 스텝 학습, 같은 태스크에서:
+
+| ACT — 성공 | Diffusion Policy — 실패 |
+|---|---|
+| ![ACT 성공](plots/07_act_aloha_success.gif) | ![Diffusion 실패](plots/08_diffusion_aloha_fail.gif) |
 
 ### 종합 결론
 
