@@ -1,5 +1,7 @@
 # [2부] 로봇 Policy 선택 에이전트
 
+![에이전트 배너](../plots/00_agent_banner.png)
+
 1부에서 벤치마킹한 4개의 policy(pusht·aloha × Diffusion Policy·ACT)를,
 **상황에 맞게 스스로 골라 실행하는 에이전트**를 만들었습니다.
 
