@@ -352,14 +352,26 @@ lerobot-eval \
   --output_dir=outputs/eval_best
 ```
 
-실험 스크립트는 `run_ablation.sh`, `run_steps_curve.sh`에 있습니다.
+실험 스크립트 (모두 저장소 루트에 있음):
+
+| 스크립트 | 내용 |
+|---|---|
+| `run_ablation.sh` | 실험 2 — pusht, n_action_steps 스윕 (Diffusion·ACT) |
+| `run_steps_curve.sh` | 실험 3 — pusht, Diffusion 학습 스텝 곡선 |
+| `run_act_steps_curve.sh` | 실험 3 — pusht, ACT 학습 스텝 곡선 |
+| `run_verify.sh` | 실험 3 — pusht, Diffusion 200회 검증 |
+| `run_act_verify.sh` | 실험 3 — pusht, ACT 200회 검증 |
+| `run_act_200k_curve.sh` | 실험 4 — pusht, ACT 20만 스텝 확장 곡선 |
+| `run_act_verify2.sh` | 실험 4 — pusht, ACT 확장 학습 200회 검증 |
+| `run_aloha_ablation.sh` | 실험 5 — aloha, n_action_steps 스윕 |
+| `run_aloha_steps_curve.sh` | 실험 5 — aloha, 학습 스텝 곡선 |
 
 ---
 
 ## 산출물
 
 - 학습된 모델: [Hugging Face](https://huggingface.co/ciaociao0617)
-- 학습 곡선: <!-- wandb 프로젝트 링크 -->
+- 학습 곡선: [wandb](https://wandb.ai/ciaociao0617-individual/lerobot?nw=nwuserciaociao0617)
 - 평가 영상: `outputs/eval_*/videos/`
 
 ---
